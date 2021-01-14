@@ -49,7 +49,7 @@ parameters:
 - name: MYSQL_VERSION
   displayName: Mysql imagestream tag in openshift project
   required: true
-  value: 8.0
+  value: "8.0"
 objects:
 - kind: Service
   apiVersion: v1
