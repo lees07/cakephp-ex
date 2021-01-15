@@ -63,17 +63,6 @@ objects:
       targetPort: 3306
     selector:
       name: ${DATABASE_SERVICE_NAME}
-- kind: PersistentVolumeClaim
-  apiVersion: v1
-  metadata:
-    name: ${DATABASE_SERVICE_NAME}
-    namespace: ${DATABASE_NAMESPACE}
-  spec:
-    accessModes:
-    - ReadWriteOnce
-    resources:
-      requests:
-        storage: ${VOLUME_CAPACITY}
 - kind: DeploymentConfig
   apiVersion: v1
   metadata:
