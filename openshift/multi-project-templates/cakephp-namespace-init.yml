@@ -113,3 +113,14 @@ objects:
     database-user: ${DATABASE_USER}
     database-password: ${DATABASE_PASSWORD}
     database-root-password: ${DATABASE_ROOT_PASSWORD}
+- kind: PersistentVolumeClaim
+  apiVersion: v1
+  metadata:
+    name: ${DATABASE_SERVICE_NAME}
+    namespace: ${DATABASE_NAMESPACE}
+  spec:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: ${VOLUME_CAPACITY}
